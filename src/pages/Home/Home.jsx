@@ -6,9 +6,8 @@ import FoodDisplay from '../../componentss/FoodDisplay/FoodDisplay'
 
 const Home = () => {
 
-  const [category, setCategory] = React.useState("All");
+  const [category, setCategory] = React.useState(null);
 
-  console.log(category)
   return (
     <div>
       <Header/>

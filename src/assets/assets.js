@@ -31,6 +31,7 @@ import food_9 from './food_9.png';
 import food_10 from './food_10.png';
 import food_11 from './food_11.png';
 import food_12 from './food_12.png';
+import user from './user.png';
 
 export const assets = {
     basket_icon,
@@ -45,7 +46,8 @@ export const assets = {
     rating_stars,
     remove_icon_red,
     selector_icon,
-    sign_out_alt
+    sign_out_alt,
+    user
 }
 
 export const menu_list = [
