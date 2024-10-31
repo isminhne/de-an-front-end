@@ -5,11 +5,13 @@ import ProductService from "../../services/product.service.js";
 import {useForm} from "react-hook-form";
 import pushToast from "../../helpers/sonnerToast.js";
 import OrderService from "../../services/order.service.js";
+import {useNavigate} from "react-router-dom";
 
 const PlaceOrder = () => {
 
-  const {cartItems} = React.useContext(StoreContext);
+  const {cartItems, setCartItems} = React.useContext(StoreContext);
   const [cart, setCart] = React.useState([]);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -42,6 +44,8 @@ const PlaceOrder = () => {
     const res = await OrderService.placeOrder(body);
     if (res) {
       pushToast("Order successfully", "success");
+      setCartItems({});
+      navigate('/');
     }
   };
 
